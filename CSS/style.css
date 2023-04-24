@@ -6,6 +6,9 @@
   margin: 0 auto;
 }
 
+.header {
+  padding-bottom: 30px;
+}
 .header .logo {
   margin: 0 auto;
   display: block;
@@ -14,7 +17,6 @@
 }
 .header .menu {
   display: flex;
-  padding-bottom: 30px;
 }
 .header .menu__menu-item {
   flex: 1 1 33.3333333333%;
@@ -23,23 +25,20 @@
   color: #F03000;
   text-decoration: none;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
-.header .menu:hover {
+.header .menu__menu-item:hover {
   color: #FFFFFF;
   background-color: #F03000;
-  padding: 30px;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .header {
     display: flex;
     justify-content: space-between;
-  }
-  .header .logo {
-    flex: 1 1;
-    max-width: 235.31px;
+    align-items: center;
   }
   .header .menu {
-    flex: 1 1;
+    flex: 1 0;
   }
 }/*# sourceMappingURL=style.css.map */
