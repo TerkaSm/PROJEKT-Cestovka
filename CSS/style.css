@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.header .logo {
+  margin: 0 auto;
+  display: block;
+  padding: 30px;
+  text-align: center;
+}
+.header .menu {
+  display: flex;
+  padding-bottom: 30px;
+}
+.header .menu__menu-item {
+  flex: 1 1 33.3333333333%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #F03000;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px;
+}
+.header .menu:hover {
+  color: #FFFFFF;
+  background-color: #F03000;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header .logo {
+    flex: 1 1;
+    max-width: 235.31px;
+  }
+  .header .menu {
+    flex: 1 1;
+  }
+}/*# sourceMappingURL=style.css.map */
