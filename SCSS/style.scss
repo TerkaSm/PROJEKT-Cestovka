@@ -1,5 +1,9 @@
-* {
+html {
     box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
 }
 
 // colors
@@ -18,43 +22,72 @@ $c-grey-opacity-100: #00000000;
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 
-$font-body: 'Montserrat', sans-serif; 
+$font-body: 'Open Sans', sans-serif; 
+$font-headers: 'Montserrat', sans-serif; 
 
 // other
 
-$body-text: 16px;
+$body-text-size: 16px;
 
 $padding-20: 20px;
 $padding-30: 30px;
+
+
+// body
+
+body {
+    font-family: $font-body;
+}
+
+h1, h2 {
+    font-family: $font-headers;
+}
 
 
 // header
 
 .wrapper {
     margin: 0 auto;
+    max-width: 1200px;
+    padding: $padding-20;
 }
 
 .header {
     padding-bottom: $padding-30;
+
+    @media (min-width: 768px)  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .logo {
         margin: 0 auto;
         display: block;
         padding: 30px;
         text-align: center;
+
+        @media (min-width: 768px) {
+            margin: 0;
+        }
     }
 
     .menu {
         display: flex;
 
-        &__menu-item {
-            flex: 1 1 (calc(100% / 3));
-            font-family: $font-body;
+        &__item {
+            flex: 1 0 (calc(100% / 3));
+            font-family: $font-headers;
             font-size: 18px;
+            font-weight: 600;
             color: $c-primary;
             text-decoration: none;
             text-align: center;
             padding: $padding-20;
+
+            @media (min-width: 768px) {
+                flex: 0 0 auto;
+            }
     
             &:hover {
                 color: $c-white;
@@ -65,16 +98,6 @@ $padding-30: 30px;
 
     }
 
-    @media (min-width: 768px)  {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .menu {
-            flex: 1 0;
-        }
-
-    }
     
 }
 
