@@ -1,0 +1,25 @@
+@use 'variables';
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+// body
+
+body {
+    font-family: variables.$font-body;
+}
+
+h1, h2 {
+    font-family: variables.$font-headers;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: variables.$padding-20;
+}
