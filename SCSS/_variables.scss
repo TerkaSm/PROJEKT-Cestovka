@@ -14,7 +14,7 @@ $c-grey-opacity-100: #00000000;
 // fonts
 
 $font-body: 'Open Sans', sans-serif; 
-$font-headers: 'Montserrat', sans-serif; 
+$font-special: 'Montserrat', sans-serif; 
 
 
 
@@ -22,5 +22,6 @@ $font-headers: 'Montserrat', sans-serif;
 
 $body-text-size: 16px;
 
-$padding-20: 20px;
-$padding-30: 30px;
+$spacer: 20px;
+$spacer-half: 10px;
+$spacer-30: 30px;

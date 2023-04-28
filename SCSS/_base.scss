@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 html {
     box-sizing: border-box;
@@ -15,11 +16,15 @@ body {
 }
 
 h1, h2 {
-    font-family: variables.$font-headers;
+    font-family: variables.$font-special;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1200px;
-    padding: variables.$padding-20;
+    padding: variables.$spacer-half;
+
+    @include mixins.medium {
+        padding: variables.$spacer;
+    }
 }

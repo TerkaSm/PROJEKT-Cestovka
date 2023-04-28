@@ -1,3 +1,51 @@
 @use 'base';
 @use 'variables';
+@use 'mixins';
 @use 'components';
+
+
+.trip {
+    position: relative;
+    padding: variables.$spacer;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__foto {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__price {
+        font-family: variables.$font-special;
+        color: variables.$c-white;
+        background-color: variables.$c-primary;
+        padding: variables.$spacer;
+        font-weight: 600;
+        font-size: 18px;
+        align-self: start;
+    }
+
+    &__content {
+        color: variables.$c-white;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    &__title {
+        font-family: variables.$font-special;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-family: variables.$font-body;
+        font-size: 16px;
+    }
+}

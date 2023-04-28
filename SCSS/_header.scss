@@ -1,12 +1,13 @@
 @use 'variables';
+@use 'mixins';
 @use 'base';
 @use 'components';
 
 
 .header {
-    padding-bottom: variables.$padding-30;
+    padding-bottom: variables.$spacer-30;
 
-    @media (min-width: 768px)  {
+    @include mixins.medium {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,10 +16,10 @@
     .logo {
         margin: 0 auto;
         display: block;
-        padding: 30px;
+        padding: variables.$spacer;
         text-align: center;
 
-        @media (min-width: 768px) {
+        @include mixins.medium {
             margin: 0;
         }
     }
@@ -28,22 +29,22 @@
 
         &__item {
             flex: 1 0 (calc(100% / 3));
-            font-family: variables.$font-headers;
+            font-family: variables.$font-special;
             font-size: 18px;
             font-weight: 600;
             color: variables.$c-primary;
             text-decoration: none;
             text-align: center;
-            padding: variables.$padding-20;
-
-            @media (min-width: 768px) {
-                flex: 0 0 auto;
-            }
+            padding: variables.$spacer;
     
             &:hover {
                 color: variables.$c-white;
                 background-color: variables.$c-primary;
-                padding: variables.$padding-20;
+                padding: variables.$spacer;
+            }
+
+            @include mixins.medium {
+                flex: 0 0 auto;
             }
         }
 
