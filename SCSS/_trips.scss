@@ -7,7 +7,8 @@
 .trip {
     position: relative;
     padding: variables.$spacer;
-    height: 400px;
+    height: 150px;
+    margin-bottom: variables.$spacer;
 
     display: flex;
     flex-direction: column;
@@ -27,7 +28,7 @@
         font-family: variables.$font-special;
         color: variables.$c-white;
         background-color: variables.$c-primary;
-        padding: variables.$spacer;
+        padding: variables.$spacer-half;
         font-weight: 600;
         font-size: 18px;
         align-self: start;
@@ -40,12 +41,27 @@
 
     &__title {
         font-family: variables.$font-special;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
+        margin: 0;
     }
 
     &__description {
         font-family: variables.$font-body;
         font-size: 16px;
+        display: none;
+    }
+}
+
+.large {
+    height: 240px;
+
+    & trip__title {
+        font-size: 28px;
+        margin-bottom: variables.$spacer-half;
+    }
+
+    & trip__description {
+        display: block;
     }
 }
